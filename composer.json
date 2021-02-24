@@ -1,0 +1,28 @@
+{
+    "name": "larva/console-skeleton",
+    "type": "project",
+    "description": "Console app skeleton.",
+    "keywords": [
+        "console",
+        "skeleton"
+    ],
+    "license": "proprietary",
+    "require": {
+        "illuminate/container": "^8.29",
+        "illuminate/console": "^8.29",
+        "illuminate/events": "^8.29"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "autoloader-suffix": "_console"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
