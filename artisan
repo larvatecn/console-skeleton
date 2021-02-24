@@ -18,7 +18,7 @@ use Illuminate\Console\Application;
 |
 */
 
-require __DIR__.'/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 $container = new Container;
 $events = new Dispatcher($container);
@@ -28,6 +28,5 @@ $artisan->setName('My Console App Name');
 // Bind a command
 $artisan->resolve(HelloWorldCommand::class);
 
-$status = $artisan->run();
-
+$status = $artisan->run(new Symfony\Component\Console\Input\ArgvInput, new Symfony\Component\Console\Output\ConsoleOutput);
 exit($status);
